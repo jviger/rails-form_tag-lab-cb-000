@@ -15,5 +15,9 @@ class StudentsController < ApplicationController
     session[:form_params] = params.inspect
     redirect_to new_student_path
   end
+  
+  def set_student
+      @student = Student.find(params[:id])
+    end
 
 end
